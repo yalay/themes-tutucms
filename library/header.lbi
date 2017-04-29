@@ -1,0 +1,46 @@
+<!-- 头部代码begin -->
+<div class="index_header nav_headertop">
+	<div class="header_inner">
+		<div class="logo"><a href="{$web_url}"><img src="{$web_url}{$web_skin_dir}img/logo.png" alt="{$web_name}"></a></div>
+		<div class="header_menu">
+			<ul>
+				<li {if $homehover==1} class="current-menu-item"{/if}><a href="{$web_url}">网站首页</a></li>
+				<!--{foreach $cateTree as $val}-->
+					<!--{if $val.status}-->
+					<li {if $cid==$val.cid} class="current-menu-item"{/if}><a href="{$val.url}">{$val.name}</a></li>
+					<!--{/if}-->
+				<!--{/foreach}-->
+				<li class="megamenu toke {if $tid!=0} current-menu-ancestor{/if}"><a>精品专题</a>
+					<ul class="sub-menu">
+						<li><a>人气模特</a>
+							<ul class="sub-menu">
+								<!--{foreach @zhuanti("0,10") as $val}-->
+								<li><a href="{$val.url}">{$val.name}</a></li>
+								<!--{/foreach}-->
+							</ul>
+						</li>
+						<li><a>热门标签</a>
+							<ul class="sub-menu">
+								<!--{foreach @article(0, 0, 3, 'hits') as $val}-->
+									<!--{foreach $val.tagArr as $item}-->
+									<li><a href="{@tagsurl($item)}">{$item}</a></li>
+									<!--{/foreach}-->
+								<!--{/foreach}-->
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="login_text hide">
+			<ul id="mobile_menu">
+			<li {if $homehover==1} class="current-menu-item"{/if}><a href="{$web_url}">网站首页</a></li>
+			<!--{foreach $cateTree as $val}-->
+				<!--{if $val.status}-->
+				<li {if $cid==$val.cid} class="current-menu-item"{/if}><a href="{$val.url}">{$val.name}</a></li>
+				<!--{/if}-->
+			<!--{/foreach}-->
+		</div>
+	</div>
+</div>
+<!-- 头部代码end -->

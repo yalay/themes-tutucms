@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--{include library/top.lbi}-->
+	<title>关于{$tag}的图片 - {$web_name}</title>
+	<meta name="keywords" content="{$tag}">
+	<meta name="description" content="关于{$tag}的图片">
+	<link rel="canonical" href="{@tagsurl($tag)}">
+</head>
+<body class="home blog body_top" youdao="bind">
+	<!--{include library/header.lbi}-->
+	<div class="cat_bg">
+		<div class="cat_bg_img" style="background-image:url({$web_url}{$web_skin_dir}img/tags.png);">
+			<div><span style="font-size: 18px;color: #F14141;font-weight: 600;">{$tag}</span><br>关于{$tag}的图片</div>
+		</div>
+	</div>
+    <!--分类导航-->
+    <div class="fl flbg">
+		<div class="fl_title"><div class="fl01">{$tag}</div></div>
+	</div>
+	<div class="update_area">
+		<div class="update_area_content">
+			<ul class="update_area_lists cl">
+				<!--{foreach $list as $val}-->
+				<!--{include library/list.lbi}-->
+				<!--{/foreach}-->
+			</ul>
+			<nav class="navigation pagination" role="navigation">
+				<h2 class="screen-reader-text">文章导航</h2>
+				<div class="nav-links">{$pageHtml}</div>
+			</nav>
+		</div>
+	</div>
+	<!--{include library/footer.lbi}-->
+</body>
+</html>

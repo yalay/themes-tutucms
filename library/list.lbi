@@ -1,0 +1,10 @@
+<li class="i_list list_n2">
+	<a href="{$val.url}" title="{$val.title}">
+		<img class="waitpic" src="{$web_url}{$web_skin_dir}img/loading.gif" data-original="{@image($val.cover,270,370)}" width="270" height="370" alt="{$val.remark}" style="display: inline;">
+	</a>
+	<div class="case_info">
+		<div class="meta-title"> {$val.title} </div>
+		<div class="meta-post"><i class="fa fa-clock-o"></i> {$val.pubdate3} <span class="cx_like"><i class="fa fa-heart"></i> {$val.up} </span></div>
+	</div>
+	<div class="meta_zan xl_1"><i class="fa fa-eye"></i> {$val.hits} </div>
+</li>
