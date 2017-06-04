@@ -1,62 +1,62 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!--{include library/top.lbi}-->
-	<title>{$web_name} - {$web_keywords}</title>
-	<meta name="keywords" content="{$web_keywords}">
-	<meta name="description" content="{$web_description}">
-	<link rel="stylesheet" id="style-css" href="//cdn.bootcss.com/bxslider/4.2.12/jquery.bxslider.min.css" type="text/css" media="all">
-	<link rel="stylesheet" id="style-css" href="{$web_url}{$web_skin_dir}css/backtotop.css" type="text/css" media="all">
-	<link rel="canonical" href="{$web_url}">
+    <!--{include library/top.lbi}-->
+    <title>{$web_name} - {$web_keywords}</title>
+    <meta name="keywords" content="{$web_keywords}">
+    <meta name="description" content="{$web_description}">
+    <link rel="stylesheet" id="style-css" href="//cdn.bootcss.com/bxslider/4.2.12/jquery.bxslider.min.css" type="text/css" media="all">
+    <link rel="stylesheet" id="style-css" href="{$web_url}{$web_skin_dir}css/backtotop.css" type="text/css" media="all">
+    <link rel="canonical" href="{$web_url}">
 </head>
 <body class="home blog body_top" youdao="bind">
-	<!--{include library/header.lbi}-->
-	<!--效果html开始-->
-	<div class="site-wrap hide">
-		<ul class="bxslider">
-			<!--{foreach @article(0, 5, 6) as $val}-->
-    		<li><a target="_blank" href="{$val.url}"><img src="{@image($val.cover,590,394)}" title="{$val.title}"></a></li>
-    		<!--{/foreach}-->
-		</ul>
-	</div>
-	<!--{foreach $cateTree as $cate}-->
-		<!--{if $cate.status}-->
-			<div class="home-filter">
-				<div class="h-screen-wrap">
-					<ul class="h-screen"><li class="current-menu-item"><a href="{$cate.url}"> {$cate.name} </a></li></ul>
-				</div>
-				<ul class="h-soup cl">
-					<li class="open"><i class="fa fa-coffee"></i><a href="{$cate.url}" title="{$cate.name}">  查看更多 </a></li>
-				</ul>
-			</div>
-			<div class="update_area">
-				<div class="update_area_content">
-					<ul class="update_area_lists cl">
-						<!--{foreach @article($cate.cid, 0, 5) as $val}-->
-						<!--{include library/list.lbi}-->
-						<!--{/foreach}-->
-					</ul>
-				</div>
-			</div>
-		<!--{/if}-->
-	<!--{/foreach}-->
-	<!--{include library/footer.lbi}-->
-	<script type="text/javascript" src="//cdn.bootcss.com/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-	<script type="text/javascript">
-		$(document).ready(function(){
-			$('.site-wrap').removeClass('hide');
-			$('.bxslider').bxSlider({
-				moveSlides: 1,
-				slideMargin: 5,
-				infiniteLoop: true,
-				slideWidth: 590,
-				minSlides: 1,
-				maxSlides: 6,
-				pager: false,
-				controls: true,
-				auto: true,
-			});
-		});
-	</script>
+    <!--{include library/header.lbi}-->
+    <!--效果html开始-->
+    <div class="site-wrap hide">
+        <ul class="bxslider">
+            <!--{foreach @article(0, 5, 6) as $val}-->
+            <li><a target="_blank" href="{$val.url}"><img src="{@image($val.cover,590,394)}" title="{$val.title}"></a></li>
+            <!--{/foreach}-->
+        </ul>
+    </div>
+    <!--{foreach $cateTree as $cate}-->
+        <!--{if $cate.status}-->
+            <div class="home-filter">
+                <div class="h-screen-wrap">
+                    <ul class="h-screen"><li class="current-menu-item"><a href="{$cate.url}"> {$cate.name} </a></li></ul>
+                </div>
+                <ul class="h-soup cl">
+                    <li class="open"><i class="fa fa-coffee"></i><a href="{$cate.url}" title="{$cate.name}">  查看更多 </a></li>
+                </ul>
+            </div>
+            <div class="update_area">
+                <div class="update_area_content">
+                    <ul class="update_area_lists cl">
+                        <!--{foreach @article($cate.cid, 0, 5) as $val}-->
+                        <!--{include library/list.lbi}-->
+                        <!--{/foreach}-->
+                    </ul>
+                </div>
+            </div>
+        <!--{/if}-->
+    <!--{/foreach}-->
+    <!--{include library/footer.lbi}-->
+    <script type="text/javascript" src="//cdn.bootcss.com/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.site-wrap').removeClass('hide');
+            $('.bxslider').bxSlider({
+                moveSlides: 1,
+                slideMargin: 5,
+                infiniteLoop: true,
+                slideWidth: 590,
+                minSlides: 1,
+                maxSlides: 6,
+                pager: false,
+                controls: true,
+                auto: true,
+            });
+        });
+    </script>
 </body>
 </html>
