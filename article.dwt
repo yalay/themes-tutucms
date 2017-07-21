@@ -30,7 +30,7 @@
                         <a href="{$article.next_url}" title="下一页" class="next-cat"><i class="fa fa-chevron-right"></i></a>
                         <div class="image_div" id="image_div">
                             <!--{foreach $article.attach as $key => $val}-->
-                            <p><a href="{$article.next_url}"><img src="{$val.file}" alt="{$artilce.title}" title="点击图片查看下一张"></a></p>
+                            <p><a href="{$article.next_url}"><img src="{@image($val.file)}" alt="{$artilce.title}" title="点击图片查看下一张"></a></p>
                             <!--{/foreach}-->
                             <div class="nav-links page_imges">{$pageHtml}</div>
                         </div>
@@ -42,11 +42,11 @@
                                     <i class="fa fa-thumbs-up"></i>
                                     <span class="count"><em class="ct_ding" style="color: #F58282;">{$article.up}</em>个赞</span>
                                 </a>
-                                -->
                                 <a class="share-btn" href="javascript:;" onclick="javascript:userAddFavorite()" title="收藏">
                                     <i class="fa fa-star"></i>
                                     <span class="count">收藏</span>
                                 </a>
+                                -->
                                 <!--<a class="share-down ajax_dl_attachs" href="javascript:;"><i class="fa fa-download"></i><span class="count">下载原图</span></a>-->
                             </span>
                         </div>
